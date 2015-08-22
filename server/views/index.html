@@ -6,10 +6,17 @@
 {% block content %}
 
   <div class="container">
-
     <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
+  </div>
 
+  <form method="post" action="/submit">
+    <input type="number" name="totalPeople" placeholder="Enter the total number of people...">
+    <input type="number" name="chunkSize" placeholder="Enter the desired number of chunks...">
+    <input type="submit" value="Chunk">
+  </form>
+
+  <div class="output">
+    <p>{{output}}</p>
   </div>
 
 {% endblock %}
