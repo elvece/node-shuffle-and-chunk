@@ -28,13 +28,6 @@ function chunk(arr, num){
   return chunks;
 }
 
-// var array = [1,2,3,4,5,6,7,8,9,10];
-// var shuffled = shuffle(array);
-
-// console.log(shuffled);
-// console.log(chunk(shuffled, 4));
-
-
 function makeArray(num){
   var arr = [];
   for (var i = 1; i <= num; i++) {
@@ -43,7 +36,11 @@ function makeArray(num){
   return arr;
 }
 
-console.log(makeArray(10));
+// var array = [1,2,3,4,5,6,7,8,9,10];
+// var shuffled = shuffle(array);
+// console.log(shuffled);
+// console.log(chunk(shuffled, 4));
+// console.log(makeArray(10));
 
 module.exports = {
   chunk : chunk,

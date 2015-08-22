@@ -7,24 +7,19 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/submit', function(req, res, next){
-  var totalPeople = req.body.totalPeople;
-  console.log(totalPeople);
-
-  var chunkSize = req.body.chunkSize;
-  console.log(chunkSize);
-
-  var pplArr = makeArray(totalPeople);
-
-  var shuffled = shuffle(pplArr);
-
-  var chunked = chunk(shuffled);
-
+  var totalPeople = parseInt(req.body.totalPeople);
+  var chunkSize = parseInt(req.body.chunkSize);
+  var pplArr = utility.makeArray(totalPeople);
+  var shuffled = utility.shuffle(pplArr);
+  var chunked = utility.chunk(shuffled, chunkSize);
+  console.log(chunked);
   res.render('index', {
-    output: chunked
+    title: 'Shuffle and Chunk with Node',
+    resultTitle: 'Your chunks are:',
+    chunked: chunked
   });
 });
 
-  console.log(makeArray(10));
 
 module.exports = router;
 
