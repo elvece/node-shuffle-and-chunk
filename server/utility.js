@@ -46,8 +46,8 @@ function makeArray(num){
 // console.log(makeArray(10));
 
 module.exports = {
-  chunk : chunk,
-  shuffle : shuffle,
+  chunk: chunk,
+  shuffle: shuffle,
   makeArray: makeArray
 };
 
